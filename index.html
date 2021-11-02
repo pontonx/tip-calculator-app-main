@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="tipcalculator.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="Oblicz();">
+
+  <p id="logo">S P L I<br>
+  T T E R</p>
+
+  <main>
+    <section class="left">
+      <p>Bill</p>
+      <input type="number" value="0" class="numberInput" id="Bill" required>
+      <p id="tip">Select Tip %</p>
+      <div class="tips">
+        <button class="tip">5</button>
+        <button class="tip">10</button>
+        <button class="tip">15</button>
+        <button class="tip">25</button>
+        <button class="tip">50</button>
+        <input type="number" id="custom" placeholder="Custom" onclick="Custom();"></input>
+      </div>
+      <p id="number">Number of People</p>
+      <p id="zero">Can't be zero</p>
+      <input type="number" value="0" class="numberInput" id="People" required>
+    </section>
+    <section class="right">
+      <div class="container">
+        <div class="text">
+          <p>Tip Amount</p>
+          / person
+        </div>
+        <h1 id="tipAmount">$0.00</h1>
+      </div>
+      <div class="container">
+        <div class="text">
+          <p>Total</p>
+          / person
+        </div>
+        <h1 id="Total">$0.00</h1>
+      </div>
+      <button class="reset" onclick="Reset();">RESET</button>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Kacper Glinka</a>.
+  </div>
+  <script src="tipcalculator.js"></script>
+</body>
+</html>
