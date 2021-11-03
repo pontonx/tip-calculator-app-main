@@ -24,6 +24,8 @@ function Oblicz(){
         document.getElementById("People").style.border = "2px solid transparent";
         document.getElementById("zero").innerHTML = "";
     }
+
+    setInterval(Oblicz, 1000);
 }
 
 var allBtn = document.querySelectorAll('.tip');
